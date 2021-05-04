@@ -2,6 +2,13 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+
+QT += serialbus widgets
+requires(qtConfig(combobox))
+
+qtConfig(modbus-serialport): QT += serialport
+
+TARGET = modbusmaster
 CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
